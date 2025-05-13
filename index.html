@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Enjoy Every Lick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gamede's Fried Chicken</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Button That Changes Text & Color -->
+<button id="specialBtn">Click Me If You Are Hungry!</button> 
+    <!-- Image Slideshow -->
+    <section id="hero">
+        <h2>Enjoy Every Lick!</h2>
+        <button id="orderBtn">Order Now</button>
+    </section>
+
+    <section id="menu">
+        <h2>Our Mains</h2>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/13795311/pexels-photo-13795311.jpeg" alt="Chicken Bucket">
+                <h3>G's Chicken Bucket</h3>
+                <p>R90</p>
+                <label for="portion">Choose Portion:</label>
+                <select id="portion">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <label for="spice">Choose Spice Level:</label>
+                <select id="spice">
+                    <option value="Mild">Mild</option>
+                    <option value="Hot">Hot</option>
+                    <option value="Extra Hot">Extra Hot</option>
+                </select>
+                <button onclick="addToCart('Chicken Bucket', 90, 'portion', 'spice')">Add to Cart</button>
+            </div>
+        <br><br>
+        <div class="menu-item">
+            <img src="https://images.pexels.com/photos/28496633/pexels-photo-28496633/free-photo-of-delicious-juicy-burger-with-bacon-and-cheese.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="KFC Burger">
+            <h3>G's Burger</h3>
+            <p>R60</p>
+            <button onclick="addToCart('Burger', 60)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="https://images.pexels.com/photos/4061475/pexels-photo-4061475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hot Wings">
+            <h3>Hot Wings (6 pcs)</h3>
+            <p>R50</p>
+            <button onclick="addToCart('Hot Wings', 50)">Add to Cart</button>
+        <br>
+        <div class="menu-item">
+            <img src="https://images.pexels.com/photos/10361458/pexels-photo-10361458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dunked Wings">
+            <h3>Dunked Wings (6 pcs)</h3>
+            <p>R70</p>
+            <button onclick="addToCart('Hot Wings', 70)">Add to Cart</button>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="https://images.pexels.com/photos/15695868/pexels-photo-15695868/free-photo-of-pile-of-ready-to-eat-fries.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Fries">
+            <h3>Fries (Large)</h3>
+            <p>R25</p>
+            <button onclick="addToCart('Fries', 25)">Add to Cart</button>
+        </div>
+    <section id="menu">
+        <h2>Did Someone say Drinks?</h2>
+    
+        <!-- Drinks Section -->
+        <div id="drinks">
+            <h3> Refreshments</h3>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Soft Drinks">
+                <h4>Soft Drinks (Coke, Fanta, Sprite, Pepsi)</h4>
+                <p>R15</p>
+                <button onclick="addToCart('Soft Drinks', 15)">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/6463655/pexels-photo-6463655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Milkshake">
+                <h4>Milkshake (Chocolate/Vanilla/Strawberry)</h4>
+                <p>R35</p>
+                <button onclick="addToCart('Milkshake', 35)">Add to Cart</button>
+            </div>
+            </div>
+        <!-- Desserts Section -->
+        <div id="desserts">
+            <h3>Left A Space For Our Delicious Desserts</h3>
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/1294943/pexels-photo-1294943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ice Cream">
+                <h4>Ice Cream (Vanilla/Chocolate)</h4>
+                <p>R20</p>
+                <button onclick="addToCart('Ice Cream', 20)">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/4110008/pexels-photo-4110008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cake">
+                <h4>Cake Slice (Chocolate/Vanilla)</h4>
+                <p>R29</p>
+                <button onclick="addToCart('Cake Slice', 29)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+        <div id="cart">
+            <h2>🛒 Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: R<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </section>
+<!-- Tabs & Accordion for Menu -->
+
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p> Visit Us: 123 Gamede Street, Johannesburg, South Africa</p>
+            <p> Call Us: +27 11 123 4567</p>
+            <p>Business Hours: Monday - Sunday, 9 AM - 9 PM</p>
+            <p>Email: info@gamedesfriedchicken.com</p>
+        </div>
+        <p class="copyright">© 2025 Gamede's Fried Chicken. All rights reserved.</p>
+    </footer>
+</body>
+</html>
