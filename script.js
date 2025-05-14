@@ -108,10 +108,6 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-// Bonus: Secret Action (Double-Click Order Button for Special Offer)
-document.getElementById("orderBtn").addEventListener("dblclick", function() {
-    alert("🎉 Surprise Discount! You just unlocked a special deal.");
-});
 // Button Text Change on Click
 document.getElementById("specialBtn").addEventListener("click", function() {
     this.textContent = "You Clicked Me!";

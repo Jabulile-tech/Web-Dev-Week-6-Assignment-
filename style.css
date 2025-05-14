@@ -215,3 +215,36 @@ footer {
     max-width: 400px;
     border-radius: 10px;
 }
+#menuNav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #c80000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#menuNav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menuNav ul li {
+    margin: 10px 0;
+}
+
+#menuToggle {
+    background-color: #c80000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#menuToggle:hover {
+    background-color: #ff6600;
+}
